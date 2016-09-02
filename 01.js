@@ -3,32 +3,32 @@
 
 
 const cars = [{
-    color: 'red',
+    colour: 'red',
     type: 'Volvo'
   }, {
-    color: 'yellow',
+    colour: 'yellow',
     type: 'VW'
   }, {
-    color: 'red',
+    colour: 'red',
     type: 'Ferrari'
   }, {
-    color: 'white',
+    colour: 'white',
     type: 'Tesla'
   }, {
-    color: 'yellow',
+    colour: 'yellow',
     type: 'Toyota'
   }, {
-    color: 'red',
+    colour: 'red',
     type: 'Lada'
   }, {
-    color: 'green',
+    colour: 'green',
     type: 'Trabant'
 }];
 
 countBycolor = function () {
-  return cars.reduce((acc, car) => {
-    acc[car.color] = (acc[car.color] + 1) || 1;
-    return acc;
+  return cars.reduce((numOfCarsbycolour, car) => {
+    numOfCarsbycolour[car.colour] = (numOfCarsbycolour[car.colour] + 1) || 1;
+    return numOfCarsbycolour;
   },{});
 }
 
