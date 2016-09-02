@@ -25,3 +25,11 @@ const cars = [{
     type: 'Trabant'
 }];
 
+countBycolor = function () {
+  return cars.reduce((acc, car) => {
+    acc[car.color] = (acc[car.color] + 1) || 1;
+    return acc;
+  },{});
+}
+
+console.log(countBycolor());
